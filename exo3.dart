@@ -3,8 +3,8 @@ import 'dart:io';
 void main() {
   List<int> nombres = [];
 
-  print("📊 Programme interactif de statistiques");
-  print("Entrez vos nombres un par un. Tapez 'fin' pour terminer.\n");
+  print("\n Programme interactif de statistiques");
+  print("\n Entrez vos nombres un par un. Tapez 'fin' pour terminer.\n");
 
   // --- 1. Lecture interactive des nombres ---
   while (true) {
@@ -16,7 +16,7 @@ void main() {
 
     int? nombre = int.tryParse(saisie); // Essaye de convertir en entier
     if (nombre == null) {
-      print("⚠️ Entrée invalide ! Veuillez entrer un nombre.");
+      print(" Entrée invalide ! Veuillez entrer un nombre.");
       continue;
     }
 
@@ -25,7 +25,7 @@ void main() {
 
   // Vérification si la liste est vide
   if (nombres.isEmpty) {
-    print("⚠️ Aucun nombre n'a été saisi. Programme terminé.");
+    print(" Aucun nombre n'a été saisi. Programme terminé.");
     return;
   }
 
@@ -45,7 +45,7 @@ void main() {
   double moyenne = somme / nombres.length;
 
   // --- 3. Affichage des résultats ---
-  print("\n--- 📊 Rapport de Statistiques ---");
+  print("\n---  Rapport de Statistiques ---");
   print("Liste saisie : $nombres");
   print("Nombre d'éléments : ${nombres.length}");
   print("Somme totale : $somme");
@@ -53,7 +53,7 @@ void main() {
   print("Valeur minimale : $minimum");
   print("Valeur maximale : $maximum");
   print(contientNegatifs
-      ? "🚨 La liste contient des nombres négatifs."
-      : "✅ Tous les nombres sont positifs ou zéro.");
+      ? " La liste contient des nombres négatifs."
+      : " Tous les nombres sont positifs ou zéro.");
   print("---------------------------------");
 }
